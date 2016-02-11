@@ -1,0 +1,25 @@
+{
+  "name": "shirly-bot",
+  "version": "1.0.0",
+  "description": "DM me and I'll tweet your #shirly",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run lint",
+    "lint": "eslint index.js lib/",
+    "start": "forever start -l forever.log -o out.log -r err.log --uid shirly index.js",
+    "stop": "forever stop shirly"
+  },
+  "author": "Myles Borins",
+  "license": "MIT",
+  "repository": "https://github.com/TheAlphaNerd/shirly-bot",
+  "dependencies": {
+    "forever": "^0.15.1",
+    "lodash.includes": "^4.0.1",
+    "request": "^2.55.0",
+    "sanitizer": "^0.1.2",
+    "twit": "^2.2.2"
+  },
+  "devDependencies": {
+    "eslint": "^1.10.3"
+  }
+}
